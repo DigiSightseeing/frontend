@@ -1,0 +1,96 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:tailwindcss/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "@typescript-eslint",
+        "tailwindcss",
+        "prettier"
+    ],
+    "rules": {
+        "tailwindcss/no-custom-classname": 0,
+        "indent": 0,
+        "react/self-closing-comp": [
+            "error",
+            { "component": true, "html": true }
+        ],
+        "tailwindcss/classnames-order": 0,
+        "tailwindcss/enforces-negative-arbitrary-values": [
+            1,
+            {
+                "callees": ["foo", "bar"],
+                "config": "./tailwind.config.js",
+                "skipClassAttribute": true,
+                "tags": ["div", "span"]
+            }
+        ],
+        "tailwindcss/enforces-shorthand": [
+            "error",
+            {
+                "callees": ["tw"],
+                "config": "./tailwind.config.js",
+                "skipClassAttribute": false,
+                "tags": ["template", "template-content", "script", "style"]
+            }
+        ],
+        "tailwindcss/migration-from-tailwind-2": [
+            "error",
+            {
+                "callees": ["tw", "apply"],
+                "config": "./tailwind.config.js",
+                "skipClassAttribute": true,
+                "tags": ["template"]
+            }
+        ],
+        "tailwindcss/no-arbitrary-value": [
+            "error",
+            {
+                "callees": ["tw"],
+                "config": "tailwind.config.js",
+                "skipClassAttribute": true,
+                "tags": ["html", "template"]
+            }
+        ],
+
+        "tailwindcss/no-contradicting-classname": ["error"],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "react/display-name": "off",
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-var-requires": 0,
+        "prettier/prettier": [2, { "useTabs": false }]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
