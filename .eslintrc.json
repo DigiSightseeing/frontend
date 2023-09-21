@@ -34,7 +34,7 @@
             "error",
             { "component": true, "html": true }
         ],
-        "tailwindcss/classnames-order": 0,
+        "tailwindcss/classnames-order": 1,
         "tailwindcss/enforces-negative-arbitrary-values": [
             1,
             {
