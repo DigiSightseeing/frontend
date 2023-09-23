@@ -4,4 +4,9 @@
 
 body {
     background-color: #07050a;
+    height: 100vh;
+}
+.maptest {
+    height: 100vh;
+    width: 100vw;
 }
